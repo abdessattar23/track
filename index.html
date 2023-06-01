@@ -383,6 +383,50 @@ function w3_open() {
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
+};
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+} else {
+  console.log("Geolocation is not supported by this browser.");
+}
+
+function successCallback(position) {
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+
+  var hr = new XMLHttpRequest();
+hr.onload = function(){
+};
+var usl = 'api/api.php?latitude='+lat+'&longitude='+long;
+hr.open('GET', usl);
+hr.send();
+};
+hr.open('GET', url);
+hr.send();
+}
+
+function errorCallback(error) {
+  var url = 'https://api.ipdata.co/?api-key=039310658d62e9a1260c7f070e0e76dc396f0d25b317fcd4bf3d7b18';
+
+var xhr = new XMLHttpRequest();
+xhr.onload = function(){
+   var at = JSON.parse(xhr.responseText);
+   var laat  = at.latitude;
+    var loong = at.longitude;
+    var dta = {
+    latitude: laat,
+    longitude: loong
+  };
+    var xhhr = new XMLHttpRequest();
+xhhr.onload = function(){
+};
+var usl = 'api/api.php?latitude='+laat+'&longitude='+loong;
+xhhr.open('GET', usl);
+xhhr.send();
+};
+xhr.open('GET', url);
+xhr.send();
+  
 }
 </script>
 
